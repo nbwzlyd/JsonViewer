@@ -5,8 +5,7 @@
 
 Android JSON viewer, to convert JSON Strings to a Friendly Readable Format, it supports expend&collapsed JSON strings.
 
-<img src="https://github.com/smuyyh/JsonViewer/blob/master/screenshot/screen.png?raw=true" width="270"/>
-
+![更改了图标](https://github.com/nbwzlyd/JsonViewer/blob/master/app/src/main/assets/Screenshot_20191015-141107_JsonViewer.jpg)
 
 ## Dependencies
 
