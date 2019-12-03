@@ -1,4 +1,3 @@
-# 原版请看 https://github.com/smuyyh/JsonViewer
 
 
 # JsonViewer
