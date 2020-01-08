@@ -10,13 +10,14 @@
 用法很简单
 ### ServerDataSuspendView 支持拖拽，全屏，半屏，缩小
 
-```java
-fun openServerDataView()
-```
 开启悬浮窗只需要调用这个方法就行了，需要悬浮窗权限，其他没啥了，和普通view使用一样
 
 ```java
-fun updateJsonText(json: ServerDataBean) {
+fun openServerDataView()//开启悬浮窗
+```
+
+```java
+fun updateJsonText(json: ServerDataBean) {//更新悬浮窗内json数据，封装了一个ServerDataBean
         mData.add(json)
         serverDataAdapter!!.notifyItemInserted(mData.size - 1)
         serverDataAdapter!!.notifyItemRangeChanged(0, mData.size + 1)
