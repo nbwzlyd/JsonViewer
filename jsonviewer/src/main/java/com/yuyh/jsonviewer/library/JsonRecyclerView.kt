@@ -67,9 +67,9 @@ class JsonRecyclerView @JvmOverloads constructor(context: Context, attrs: Attrib
         layoutManager = LinearLayoutManager(context)
     }
 
-    fun bindJson(jsonStr: String) {
+    fun bindJson(jsonStr: String,needSort: Boolean ) {
         mAdapter = null
-        mAdapter = JsonViewerAdapter(jsonStr)
+        mAdapter = JsonViewerAdapter(jsonStr,needSort)
         adapter = mAdapter
     }
 

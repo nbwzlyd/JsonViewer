@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            mRecyclewView.bindJson(result);
+                            mRecyclewView.bindJson(result,true);
                         }
                     });
                 } catch (IOException e) {

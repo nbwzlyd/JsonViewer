@@ -6,6 +6,7 @@ import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.view.ViewGroup
+import com.yuyh.jsonviewer.library.utils.JSonSortUtil
 
 import com.yuyh.jsonviewer.library.utils.Utils
 import com.yuyh.jsonviewer.library.view.JsonItemView
@@ -25,12 +26,17 @@ internal class JsonViewerAdapter : BaseJsonViewerAdapter<JsonViewerAdapter.JsonI
     private var mJSONObject: JSONObject? = null
     private var mJSONArray: JSONArray? = null
 
-    constructor(jsonStr: String) {
-        this.jsonStr = jsonStr
+    constructor(jsonStr: String,needSort:Boolean) {
+
+        if (needSort){
+            this.jsonStr = JSonSortUtil.sortJson(jsonStr)
+        }else {
+            this.jsonStr = jsonStr
+        }
 
         var jsonObj: Any? = null
         try {
-            jsonObj = JSONTokener(jsonStr).nextValue()
+            jsonObj = JSONTokener(this.jsonStr).nextValue()
         } catch (e: JSONException) {
             e.printStackTrace()
         }
