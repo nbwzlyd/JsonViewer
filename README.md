@@ -22,3 +22,4 @@ fun updateJsonText(json: ServerDataBean) {
         serverDataAdapter!!.notifyItemRangeChanged(0, mData.size + 1)
     }
 ```
+![](https://github.com/nbwzlyd/JsonViewer/blob/master/app/src/main/assets/abc_gif.gif)
