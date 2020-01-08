@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+
+    <TextView
+        android:id="@+id/text_copy"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:background="#3ACDFE"
+        android:gravity="center"
+        android:text="复制"
+        android:textColor="@android:color/white" />
+
+
+    <TextView
+        android:id="@+id/title_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/text_copy"
+        android:ellipsize="end"
+        android:textColor="#FF4081"
+        android:textSize="16dp"
+        tools:text="http://13w22e3edssdd13w22e3edssdd13w22e3edssdd13w22e3edssdd13w22e3edssdd" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_url"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <com.yuyh.jsonviewer.library.JsonRecyclerView
+            android:id="@+id/rv_json"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </HorizontalScrollView>
+
+</RelativeLayout>

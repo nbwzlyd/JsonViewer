@@ -1,12 +1,12 @@
 package com.yuyh.jsonviewer.library.adapter
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.text.style.ForegroundColorSpan
 
 /**
  * Created by yuyuhang on 2017/11/30.
  */
-abstract class BaseJsonViewerAdapter<VH : RecyclerView.ViewHolder> : RecyclerView.Adapter<VH>() {
+abstract class BaseJsonViewerAdapter<VH : androidx.recyclerview.widget.RecyclerView.ViewHolder> : androidx.recyclerview.widget.RecyclerView.Adapter<VH>() {
     companion object {
 
         var KEY_COLOR = -0x6dd867

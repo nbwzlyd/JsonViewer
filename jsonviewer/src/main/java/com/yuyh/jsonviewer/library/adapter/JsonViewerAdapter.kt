@@ -1,6 +1,6 @@
 package com.yuyh.jsonviewer.library.adapter
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
@@ -268,7 +268,7 @@ internal class JsonViewerAdapter : BaseJsonViewerAdapter<JsonViewerAdapter.JsonI
         }
     }
 
-    class JsonItemViewHolder(itemView: JsonItemView) : RecyclerView.ViewHolder(itemView) {
+    class JsonItemViewHolder(itemView: JsonItemView) : androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
 
         init {
             setIsRecyclable(false)

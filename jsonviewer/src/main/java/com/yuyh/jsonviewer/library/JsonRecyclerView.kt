@@ -1,8 +1,8 @@
 package com.yuyh.jsonviewer.library
 
 import android.content.Context
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.text.style.ForegroundColorSpan
 import android.util.AttributeSet
 import android.view.MotionEvent
@@ -20,7 +20,7 @@ import kotlin.math.sqrt
 /**
  * Created by yuyuhang on 2017/11/30.
  */
-class JsonRecyclerView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0) : RecyclerView(context, attrs, defStyle) {
+class JsonRecyclerView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0) : androidx.recyclerview.widget.RecyclerView(context, attrs, defStyle) {
 
     private var mAdapter: BaseJsonViewerAdapter<*>? = null
 
@@ -28,7 +28,7 @@ class JsonRecyclerView @JvmOverloads constructor(context: Context, attrs: Attrib
     internal var oldDist: Float = 0.toFloat()
 
     private val touchListener = object : OnItemTouchListener {
-        override fun onInterceptTouchEvent(rv: RecyclerView, event: MotionEvent): Boolean {
+        override fun onInterceptTouchEvent(rv: androidx.recyclerview.widget.RecyclerView, event: MotionEvent): Boolean {
             when (event.action and event.actionMasked) {
                 MotionEvent.ACTION_DOWN -> mode = 1
                 MotionEvent.ACTION_UP -> mode = 0
@@ -49,7 +49,7 @@ class JsonRecyclerView @JvmOverloads constructor(context: Context, attrs: Attrib
             return false
         }
 
-        override fun onTouchEvent(rv: RecyclerView, event: MotionEvent) {
+        override fun onTouchEvent(rv: androidx.recyclerview.widget.RecyclerView, event: MotionEvent) {
 
         }
 
@@ -64,7 +64,7 @@ class JsonRecyclerView @JvmOverloads constructor(context: Context, attrs: Attrib
     }
 
     private fun initView() {
-        layoutManager = LinearLayoutManager(context)
+        layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
     }
 
     fun bindJson(jsonStr: String,needSort: Boolean ) {
